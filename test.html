@@ -36,6 +36,8 @@
     </style>
 
     <script>
+        // DIALOG JavaScdript
+        // Alert(pop-up pesan peringatan), confirm(form validasi), dan prompt(harus input data nya dulu di form inputan baru akan muncul outputnya)
         var nama = prompt("siapa nama kamu?", " ");
         document.write("<p>Hello " + nama + "</p>")
 
@@ -44,6 +46,22 @@
 
         var hasil = pertanyaan ? "selamat datang" : "kamu tidak boleh disni";
         document.write(hasil);
+
+        // belajar percabangan
+        var nilai = prompt("inputkan nilai akhir :");
+        var grade = "";
+
+        if(nilai >= 90) grade = "A"
+        else if(nilai >= 80) grade = "B+"
+        else if(nilai >= 70) grade = "B"
+        else if(nilai >= 60) grade = "C+"
+        else if(nilai >= 50) grade = "C"
+        else if(nilai >= 40) grade = "D"
+        else if(nilai >= 30) grade = "E"
+        else grade = "F"
+
+        document.write(`<p> Grade anda: ${grade}</p>`)
+
     </script>
 
 </head>
