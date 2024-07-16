@@ -51,16 +51,60 @@
         var nilai = prompt("inputkan nilai akhir :");
         var grade = "";
 
-        if(nilai >= 90) grade = "A"
-        else if(nilai >= 80) grade = "B+"
-        else if(nilai >= 70) grade = "B"
-        else if(nilai >= 60) grade = "C+"
-        else if(nilai >= 50) grade = "C"
-        else if(nilai >= 40) grade = "D"
-        else if(nilai >= 30) grade = "E"
+        if (nilai >= 90) grade = "A"
+        else if (nilai >= 80) grade = "B+"
+        else if (nilai >= 70) grade = "B"
+        else if (nilai >= 60) grade = "C+"
+        else if (nilai >= 50) grade = "C"
+        else if (nilai >= 40) grade = "D"
+        else if (nilai >= 30) grade = "E"
         else grade = "F"
 
         document.write(`<p> Grade anda: ${grade}</p>`)
+
+        // belajar switch case yang sama seperti if else
+        var score = prompt("input nilai");
+        var hadiah = "";
+
+        switch (true) {
+            case score < 90:
+                hadiah = "A";
+                break;
+
+            case score < 80:
+                hadiah = "B+";
+                break;
+
+            case score < 70:
+                hadiah = "B";
+                break;
+
+            case score < 60:
+                hadiah = "C+";
+                break;
+
+            default:
+                hadiah = "F";
+        }
+        document.write(`<p> selamat: ${hadiah}</p>`)
+
+        // Menggunakan prompt untuk meminta tinggi segitiga dari pengguna
+        let tinggi = parseInt(prompt("Masukkan tinggi segitiga: "));
+
+        // perulangan baris untuk setiap baris
+        for (let baris = 1; baris <= tinggi; baris++) {
+            let barisStr = "";
+            // Loop untuk setiap kolom di setiap baris
+            for (let kolom = 1; kolom <= tinggi * 2 - 1; kolom++) {
+                // Mencetak bintang jika berada pada posisi yang sesuai
+                if (kolom >= tinggi - baris + 1 && kolom <= tinggi + baris - 1) {
+                    barisStr += "*";
+                } else {
+                    barisStr += " ";
+                }
+            }
+            console.log(barisStr);
+        }
 
     </script>
 
