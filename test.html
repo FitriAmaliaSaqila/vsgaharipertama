@@ -38,6 +38,12 @@
     <script>
         var nama = prompt("siapa nama kamu?", " ");
         document.write("<p>Hello " + nama + "</p>")
+
+
+        var pertanyaan = confirm("apakah kamu berumur di atas 18 tahun?");
+
+        var hasil = pertanyaan ? "selamat datang" : "kamu tidak boleh disni";
+        document.write(hasil);
     </script>
 
 </head>
